@@ -1,33 +1,39 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grammar Game: Rearrange Sentences</title>
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
 </head>
-
 <body>
+  <div class="game-container" id="welcome-container">
+    <h1>🎉 Welcome to the Grammar Game! 🎉</h1>
+    <p>Enter your name to start the fun:</p>
+    <input type="text" id="student-name" placeholder="Your Name">
+    <button class="btn" id="start-game">Start Game</button>
+  </div>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+  <div class="game-container" id="game-container" style="display: none;">
+    <h1 id="greeting"></h1>
+    <p>Rearrange the words to form the correct sentence:</p>
+    <div id="sentence"></div>
+    <div class="scrambled-words"></div>
+    <div>
+      <button class="btn" id="undo">Undo</button>
+      <button class="btn" id="skip">Skip</button>
+      <button class="btn" id="check">Check Answer</button>
+    </div>
+    <p id="feedback"></p>
+    <p id="progress">Question: 1/10</p>
+  </div>
 
+  <div class="game-container" id="score-container" style="display: none;">
+    <h1>🎉 Game Over! 🎉</h1>
+    <p id="final-score"></p>
+    <button class="btn" id="restart-game">Play Again</button>
+  </div>
+
+  <script src="js/game.js" defer></script>
 </body>
-
 </html>
